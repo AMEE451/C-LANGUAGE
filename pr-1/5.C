@@ -1,9 +1,9 @@
 #include<stdio.h>
-#include<conio.h>
+
 main()
 {
 	int n;
-	clrscr();
+	
 	printf("enter any number");
 	scanf("%d",&n);
 	printf("%d*1=%d\n",n,n*1);
@@ -16,7 +16,7 @@ main()
 	printf("%d*8=%d\n",n,n*8);
 	printf("%d*9=%d\n",n,n*9);
 	printf("%d*10=%d\n",n,n*10);
-	getch();
+ 
 }
 
 
