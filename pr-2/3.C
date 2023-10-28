@@ -1,10 +1,9 @@
 #include<stdio.h>
-#include<conio.h>
 main()
 {
 	int unit;
 	double bill,totalbill,surcharges;
-	clrscr();
+	
 	printf("enter electricity units");
 	scanf("%d",&unit);
 	if(unit<=50)
@@ -26,5 +25,5 @@ main()
 	surcharges=bill*0.20;
 	totalbill=bill + surcharges;
 	printf("electricity bill=Rs. %.2f",totalbill);
-	getch();
+	
 }

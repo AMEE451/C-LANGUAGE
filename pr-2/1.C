@@ -1,9 +1,8 @@
 #include<stdio.h>
-#include<conio.h>
 main()
 {
 	char n;
-	clrscr();
+	
 	printf("enter any character");
 	scanf("%c",&n);
 	if((n>='A'&&n<='Z')||(n>='a'&&n<='z'))
@@ -18,6 +17,6 @@ main()
 	{
 		printf("special character");
 	}
-	getch();
+
 }
 
