@@ -1,23 +1,35 @@
 #include <stdio.h>
 int main()
 {
-    char email[20];
-    char password[20];
-
+    int i;
     FILE *fp;
-    fp = fopen("email.txt", "a");
 
-    printf("enter email");
-    scanf("%s", &email);
-    printf("enter password");
-    scanf("%s", &password);
+    fp=fopen("even.txt","a");
 
-    printf("EMAIL : %s\n", email);
-    printf("PASSWORD : %s", password);
+    fprintf(fp"even numbers : %d\t");
+    for(i=50;i<70;i++)
+    {
+        if(i%2==0)
+        {
+            printf(fp,"%d",i);
+        }
+    }
+    fclose(fp);
 
-    fprintf(fp, "EMAIL\t\n : %s", email);
-    fprintf(fp, "PASSWORD\t : %s", password);
+    printf("\n\n");
 
-    
-    return 0;
+    FILE*fp1;
+    fp1=fopen("odd.txt""a");
+
+    fprintf(fp1"odd numbers :");
+
+    for(i=50;i<70;i++)
+    {
+        if(i%2==1)
+        {
+            printf(fp,"%d",i);
+        }
+    }
+
+
 }
