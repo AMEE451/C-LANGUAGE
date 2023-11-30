@@ -12,24 +12,39 @@ void cube(int n, int array[n][n])
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
+        {
             printf(" %d ", (*ptr[i][j]) * (*ptr[i][j]) * (*ptr[i][j]));
-            printf("\n");
+        }
+        printf("\n");
     }
     
 }
 int main()
 {
-    int a[3][3];
+    int r,c;
+     
+     printf("enter array size");
+     scanf("%d%d",&r,&c);
 
-    for (int i = 0; i < 3; i++)
+        int a[r][c];
+    for (int i = 0; i < r; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < c; j++)
         {
-            printf("enter values of array :");
-            scanf(" %d \n", &a[i][j]);
+            printf("a[%d][%d] :",i,j);
+            scanf(" %d ", &a[i][j]);
         }
+        printf("\n");
+    }
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            printf(" %d ", &a[i][j]);
+        }
+        printf("\n");
     }
 
-    cube(3, a);
+    cube(r, c);
     return 0;
 }
