@@ -6,7 +6,7 @@ int main()
 
     fp = fopen("even.txt", "w");
 
-    fprintf(fp, "even numbers : %d\t");
+    fprintf(fp, "even numbers : ");
     for (i = 50; i < 70; i++)
     {
         if (i % 2 == 0)

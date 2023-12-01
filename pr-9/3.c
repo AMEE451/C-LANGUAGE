@@ -5,16 +5,15 @@ struct student
     int rollno;
     char name[20];
     int che_marks, maths, phy;
-    float per;
-    
+    int total;
+    int per;
 };
 int main()
 {
     struct student s1[5];
-    float total,per,avg;
     for (int i = 0; i < 5; i++)
     {
-    
+
         printf("enter your rollno : ");
         scanf("%d", &s1[i].rollno);
         printf("enter your name : ");
@@ -27,20 +26,20 @@ int main()
         scanf("%d", &s1[i].phy);
     }
 
-    for(int i=0;i<3;i++)
+    for (int i = 0; i < 5; i++)
     {
-        total=(s1[i].che_marks+s1[i].maths+s1[i].phy);
-
-        s1[i].per=(total/300)*100;
+        s1[i].total = (s1[i].che_marks + s1[i].maths + s1[i].phy);
+        printf("Total: %d\n", s1[i].total);
+        s1[i].per = s1[i].total / 3;
+        printf("Per: %.d\n", s1[i].per);
     }
-    
 
     printf("\n\n\t---:STUDENTS DATA:---\n\n");
 
-    printf("| ROOLNO\tNAME\tCHEM_M\tMATHS-M\tPHY_M\tPER\n|");
-    printf("| ------\t----\t------\t-------\t-----\t---\n|");
-    for (int i = 0; i < 4; i++)
+    printf("| ROOLNO\tNAME\tCHEM_M\tMATHS-M\tPHY_M\tPER|\n");
+    printf("| ------\t----\t------\t-------\t-----\t---|\n");
+    for (int i = 0; i < 5; i++)
     {
-        printf("|%d\t%s\t%d\t%d\t%d\t%.2f|\n", s1[i].rollno, s1[i].name, s1[i].che_marks, s1[i].maths, s1[i].phy,s1[i],s1[i].per);
+        printf("| %d\t\t%s\t%d\t%d\t%d\t%d |\n", s1[i].rollno, s1[i].name, s1[i].che_marks, s1[i].maths, s1[i].phy, s1[i].per);
     }
 }
