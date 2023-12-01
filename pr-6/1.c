@@ -1,32 +1,36 @@
 #include <stdio.h>
-int main()
+int main(int argc, char const *argv[])
 {
-    char str[20];
-    int i, j, len = 0;
-    char ispalindrome = 0;
-    printf("enter a string : ");
-    scanf("%s", &str);
+    char name[20], name2[20];
+    int len = 0, n = 0, pal = 0;
 
-    while (str[len] != NULL)
-    {
+    printf("Enter name : ");
+    scanf("%s", &name); 
+
+    for (int i = 0; name[i] != '\0'; i++)
         len++;
-    }
-    len--;
 
-    for (int i = 0; i < len; i++)
+    for (int i = len - 1; i >= 0; i--)
     {
-        if (str[i] != str[len - i - 1])
+        name2[n++] = name[i]; 
+    }
+
+    for (int i = 0; name[i] != '\0'; i++)
+    {
+        if (name[i] == name2[i])
         {
-            ispalindrome = 1;
-            break;
+            pal++;
         }
     }
-    if (ispalindrome)
+
+    if (pal == len)
     {
-        printf("string is palindrome\n");
+        printf("string is Palindrome");
     }
     else
     {
-        printf("string is not palindrome");
+        printf("string is Not Palindrome");
     }
+
+    return 0;
 }

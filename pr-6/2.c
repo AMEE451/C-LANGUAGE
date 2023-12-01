@@ -1,23 +1,23 @@
 #include <stdio.h>
 int main()
 {
-    char name[20], count;
+    char name[50], count;
 
     printf("enter any string");
-    scanf("%s", &name);
+    scanf("%[^\n]", &name);
 
     int n = strlen(name);
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         count = 1;
-        if (name[i] != NULL)
+        if (name[i] != '\0')
         {
             for (int j = i + 1; j < n; j++)
             {
                 if (name[i] == name[j])
                 {
                     count++;
-                    name[j] = NULL;
+                    name[j] = '\0';
                 }
             }
             printf("%c : %d\n", name[i], count);

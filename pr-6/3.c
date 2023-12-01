@@ -4,9 +4,9 @@ int main()
     char name[20], name1[20];
     int count, run = 0;
 
-    printf("eneter string");
+    printf("enter string : ");
     scanf("%s", &name);
-    printf("enter name2");
+    printf("enter string2 : ");
     scanf("%s", &name1);
 
     for (int i = 0; name[i] != NULL; i++)
